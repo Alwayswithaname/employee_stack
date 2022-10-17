@@ -1,7 +1,7 @@
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern');
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 const path = require('path');
 const fs = require('fs')
 
@@ -49,7 +49,7 @@ function appMenu() {
                         name: 'managerEmail',
                         message: "what is the team manger's email?",
                         validate: (answer) => {
-                            const pass = answer.math(/\S+@\S+\.\S+/)
+                            const pass = answer.match(/\S+@\S+\.\S+/)
                             if (pass) {
                                 return true
                             }
@@ -76,17 +76,17 @@ function appMenu() {
                     answers.managerOfficeNumber
                 );
                 teamMembers.push(manager);
-                idArray.push(answer.managerId);
-                creatTeam()
+                idArray.push(answers.managerId);
+                createTeam()
             })
     }
-    function creatTeam() {
+    function createTeam() {
         inquirer
         .prompt([
             {
                 type: 'list',
-                name: "",
-                message: "",
+                name: "memberChoice",
+                message: "Which type of employee are you adding? ",
                 choices: [
                     'Engineer',
                     'Intern',
@@ -99,10 +99,10 @@ function appMenu() {
                 case 'Engineer':
                     addEngineer();
                     break;
-                case 'intern':
+                case 'Intern':
                     addIntern();
                     break;
-                    default:
+                default:
                         buildTeam();
             }
         });
@@ -137,7 +137,7 @@ function appMenu() {
                         name: 'engineerEmail',
                         message: "what is the engineer's email?",
                         validate: (answer) => {
-                            const pass = answer.math(/\S+@\S+\.\S+/)
+                            const pass = answer.match(/\S+@\S+\.\S+/)
                             if (pass) {
                                 return true
                             }
@@ -164,10 +164,10 @@ function appMenu() {
             );
             teamMembers.push(engineer);
             idArray.push(answers.engineerId);
-            creatTeam();
+            createTeam();
         });
     }
-    function addEngineer() {
+    function addIntern() {
         inquirer
             .prompt([
                 {
@@ -197,7 +197,7 @@ function appMenu() {
                         name: 'internEmail',
                         message: "what is the intern's email?",
                         validate: (answer) => {
-                            const pass = answer.math(/\S+@\S+\.\S+/)
+                            const pass = answer.match(/\S+@\S+\.\S+/)
                             if (pass) {
                                 return true
                             }
@@ -224,7 +224,7 @@ function appMenu() {
             );
             teamMembers.push(intern);
             idArray.push(answers.internID);
-            creatTeam();
+            createTeam();
         });
     }
 

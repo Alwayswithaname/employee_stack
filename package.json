@@ -1,28 +1,5 @@
 {
-  "name": "employee_stack",
-  "version": "1.0.0",
-  "description": "a contact builder for employer",
-  "main": "app.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Alwayswithaname/employee_stack.git"
-  },
-  "author": "William P",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Alwayswithaname/employee_stack/issues"
-  },
-  "homepage": "https://github.com/Alwayswithaname/employee_stack#readme",
-  "devDependencies": {
-    "jest": "^29.2.0"
-  },
   "dependencies": {
-    "inquirer": "^9.1.3"
+    "inquirer": "^8.2.4"
   }
 }
