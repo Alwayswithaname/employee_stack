@@ -1,0 +1,35 @@
+.team-heading {
+    background-color: blue;
+    color: white;
+}
+
+.team-area {
+    max-width: 1000px;
+    margin: 3em;
+    flex-wrap: wrap;
+}
+
+.employee-card {
+    margin: 1em;
+    max-width: 280px;
+    width: 22rem;
+    background-color: red;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    border: none;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: azure;
+}
+
+.list-group-item {
+    color: black;
+    text-decoration: none;
+}
