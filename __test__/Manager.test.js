@@ -1,4 +1,3 @@
-const { default: test } = require("node:test");
 const Manager = require("../lib/Manager");
 
 test("can set office nymber via constructor argument", () => {
@@ -15,8 +14,8 @@ test("getRole() should return \"Manager\"", () => {
 });
 
 
-test("can get office number via getoffice()", () => {
+test("can get office number via getOfficeNumber()", () => {
     const testValue = 100;
     const e = new Manager("Foo", 1, "test@test.com", testValue);
-    expect(e.getOfficeNumber).toBe(testValue);
+    expect(e.getOfficeNumber()).toBe(testValue);
 });
